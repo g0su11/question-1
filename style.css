@@ -1,16 +1,11 @@
-/* logoNCC 1 */
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
     list-style-type: none;
 }
-
-body {
-    height: 100%;
-}
-
 
 .container {
     height: 100vh;
@@ -19,18 +14,16 @@ body {
 }
 
 .sidebar {
-    min-height: 100vh;
-    width: 150px;
+    position: fixed;
+    height: 100vh;
+    min-width: 150px;
     background-color: black;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
-    /* identical to box height */
     color: #FFFFFF;
 }
-
-
 
 .sidebar .list .item {
     padding: 14px 0 14px 16px;
@@ -38,27 +31,30 @@ body {
     border-bottom: 1px solid #5C5C5C;
 }
 
+.item:hover {
+    background-color: #5C5C5C;
+}
 
 .main {
+    margin-left: 150px;
     width: 100%;
 }
 
 .wrapper {
-    padding: 40px 129px;
+    width: 85%;
+    margin: auto;
 }
 
 .wrapper .img {
-    /* logoNCC 1 */
     width: 310px;
     height: 122px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .wrapper .title {
-    /* logoNCC 1 */
-    min-height: 210px;
+    min-height: 170px;
     margin-top: 30px;
-    padding: 38px 19% 0;
+    padding: 38px 15% 30px;
     text-align: center;
     background-color: #EFEFEF;
 }
@@ -80,7 +76,6 @@ body {
     height: 252px;
 }
 
-
 .top-card {
     display: flex;
     flex-direction: row;
@@ -90,9 +85,43 @@ body {
     height: 128px;  
 }
 
-.footer p {
-    margin-top: 90px;
-    padding: 30px 1514px 0px 129px;
+.footer {
+    margin-top: 190px;
     border-top: 1px solid #DEDEDE;
+}
+
+.footer p {
+    padding: 35px 125px;
+    border-top: 1px solid #DEDEDE;
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    .sidebar {
+        height: 50px;
+        width: 100%;
+        background-color: black;
+    }
+    .list {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .sidebar .list .item {
+        border: 0px;
+    }
+    .main {
+        margin: 50px 0;
+    }
+    .wrapper .content .card {
+       margin-bottom: 90px;
+    }
 }
 
